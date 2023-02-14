@@ -1,0 +1,20 @@
+<% if user_signed_in? %>
+<table class="table table-striped table-bordered table-hover">
+   <thead class="table-dark">
+    <th>Name</th>
+    <th>Email</th>
+    <th>Phone</th>
+    <th>Creator User ID</th>
+    <th>Action</th>
+  </thead>
+  <tbody>
+    <% @friends.each do |friend| %>
+      <%= render friend %>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to "New friend", new_friend_path, class: "btn btn-secondary" %>
+<% else %>
+  <%= render 'home/index' %>
+<% end %>

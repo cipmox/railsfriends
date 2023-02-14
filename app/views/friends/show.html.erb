@@ -1,0 +1,23 @@
+<div class="p-5 mb-4 bg-light rounded-12 bg-light border">
+    <div class="container-fluid py-5 text-center">
+      <img src="<%= @friend.image %>" class="img-thumbnail" alt="...">
+      <h1 class="display-5 fw-bold"><%= @friend.first_name %> <%= @friend.last_name %></h1>
+      <p class="fs-5">
+        <%= @friend.email %> |  <%= @friend.phone %>
+      </p>
+      <br/>
+      <div class="row">
+      <div class="col">
+        <%= link_to "Edit", edit_friend_path(@friend), class: "btn btn-dark form-control" %> 
+      </div>
+      <div class="col">    
+        <%= link_to "Back", friends_path, class: "btn btn-secondary form-control" %>
+      </div>
+      <div class="col"> 
+        <%= button_to "Delete", @friend, data: { confirm: "Are you sure?" }, method: :delete, class: "btn btn-outline-danger form-control" %>
+      </div>
+    </div> 
+    </div>
+</div>
+
+
