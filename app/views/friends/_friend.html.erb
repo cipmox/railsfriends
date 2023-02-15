@@ -1,17 +1,20 @@
 <tr id="<%= dom_id friend %>">
-  <td>
+  <td style="width: 100px;">
+    <%= image_tag(friend.image, style: 'width: 100%', class: 'rounded-circle') %>
+  </td>
+  <td class="align-middle">
     <%= link_to friend.first_name + ' ' + friend.last_name , friend %>
   </td>
-  <td>
+  <td class="align-middle">
     <%= friend.email %>
   </td>
-  <td>
+  <td class="align-middle">
     <%= friend.phone %>
   </td>
-  <td>
+  <td class="align-middle">
     <%= friend.user_id %>
   </td>
-  <td>
+  <td class="align-middle">
     <%= button_to 'Delete', friend, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-outline-danger btn-sm" %>
   </td>
 </tr>

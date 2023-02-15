@@ -1,6 +1,13 @@
 <div class="p-5 mb-4 bg-light rounded-12 bg-light border">
     <div class="container-fluid py-5 text-center">
-      <img src="<%= @friend.image %>" class="img-thumbnail" alt="...">
+      <div class="row">
+      <div class="col" style="width: 200px; height: auto;">
+      <!-- <div style="width: 200px; height: auto;"> -->
+        <%= image_tag(@friend.image, style: 'width: 40%') %>
+      <!-- </div> -->
+      <!-- <div style="width: 200px; height: auto;"> -->
+      </div>
+      </div> 
       <h1 class="display-5 fw-bold"><%= @friend.first_name %> <%= @friend.last_name %></h1>
       <p class="fs-5">
         <%= @friend.email %> |  <%= @friend.phone %>
