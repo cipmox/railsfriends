@@ -6,7 +6,7 @@
     <th>Email</th>
     <th>Phone</th>
     <th>Creator User ID</th>
-    <th>Action</th>
+    <th class="text-center">Action</th>
   </thead>
   <tbody>
     <% @friends.each do |friend| %>
@@ -16,6 +16,8 @@
 </table>
 
 <%= link_to "New friend", new_friend_path, class: "btn btn-secondary" %>
+<br/>
+<br/>
 <% else %>
   <%= render 'home/index' %>
 <% end %>
